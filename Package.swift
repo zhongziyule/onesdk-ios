@@ -26,7 +26,7 @@ let package = Package(
         .binaryTarget(
             name: "oneSDKBranch",
             url: "https://github.com/zhongziyule/oneSDK-ios/raw/main/oneSDK.xcframework.zip",
-            checksum: "886d822e417726ed4ba23146168ce67249095f1cc67dcf3234630ef57648add1"
+            checksum: "9fde6d0fbaac00deab95a0111fcce9a10de416c74af46c614c9d1592bec67fbf"
         ),
         .target(
             name: "oneSDK",

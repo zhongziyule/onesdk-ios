@@ -1,0 +1,4 @@
+framework module oneSDKBranch {
+  header "oneSDKBranch-Swift.h"
+  requires objc
+}

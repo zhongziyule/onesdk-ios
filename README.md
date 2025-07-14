@@ -5,11 +5,14 @@ Adjust版本5.4.0
 
 未经授权, 禁止使用  
 
+## Version 1.0.15  
+xcframework内置bundle十四次测试  
+
 ## Version 1.0.14  
-xcframework内置bundle十三次测试 
+xcframework内置bundle十三次测试  
 
 ## Version 1.0.13  
-xcframework内置bundle十二次测试 
+xcframework内置bundle十二次测试  
 
 ## Version 1.0.12  
 xcframework内置bundle十一次测试  

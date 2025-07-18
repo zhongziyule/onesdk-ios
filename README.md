@@ -5,6 +5,9 @@ Adjust版本5.4.0
 
 未经授权, 禁止使用  
 
+## Version 1.0.23  
+xcframework首次封版本, 并在本地做完系统测试  
+
 ## Version 1.0.22  
 xcframework内置bundle二十一次测试  
 

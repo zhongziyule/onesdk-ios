@@ -6,7 +6,6 @@ import PackageDescription
 let package = Package(
     name: "oneSDK",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "oneSDK",
             targets: ["oneSDK"]),
@@ -14,7 +13,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/facebook/facebook-ios-sdk.git",
-            from: "18.0.0"),
+            from: "14.1.0"),
         .package(
             url: "https://github.com/google/GoogleSignIn-iOS.git",
             from: "8.0.0"),
@@ -25,8 +24,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "oneSDKBranch",
-            url: "https://github.com/zhongziyule/oneSDK-ios/raw/main/oneSDK.xcframework.zip",
-            checksum: "6ad35a31497a39bdd27d441b61a36bb4087f425c10b3c1eb44c69e85059e88ec"
+            url: "https://github.com/zhongziyule/onesdk-ios/raw/main/oneSDK.xcframework.zip",
+            checksum: "ad9e61572faefc96118bd639aa357d796bcac17704dc9fb03c1c18fc35950218"
         ),
         .target(
             name: "oneSDK",
@@ -44,6 +43,14 @@ let package = Package(
                 .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS"),
                 .product(name: "GoogleSignInSwift", package: "GoogleSignIn-iOS")
             ],
+            linkerSettings: [
+                // 链接 Adjust 核心框架
+                .linkedFramework("Adjust"),
+                // 链接 Adjust 签名框架（解决 ODCConversionManager 问题）
+                .linkedFramework("AdjustSigSdk"),
+                // 确保 Objective-C 类被正确加载
+                .unsafeFlags(["-ObjC"])
+            ]
         ),
         .testTarget(
             name: "oneSDKTests",

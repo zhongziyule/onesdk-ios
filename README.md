@@ -5,6 +5,9 @@ Adjust版本5.4.0
 
 未经授权, 禁止使用  
 
+## Version 1.0.27  
+adjust导入四次测试  
+
 ## Version 1.0.26  
 adjust导入三次测试  
 

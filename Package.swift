@@ -19,7 +19,7 @@ let package = Package(
         .binaryTarget(
             name: "oneSDKBranch",
             url: "https://github.com/zhongziyule/onesdk-ios/raw/main/oneSDK.xcframework.zip",
-            checksum: "0ef0170c5596d1bfab4cb453f29c47a48298d27b708b211f6544b3df480b14cc"
+            checksum: "0b153ee56ead852bc4bd00731d8c782afc18c1e93a2e39b433e66568181624f1"
         ),
         .target(
             name: "oneSDK",
@@ -39,11 +39,8 @@ let package = Package(
                 // Google Sign-In 依赖
                 .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS"),
                 .product(name: "GoogleSignInSwift", package: "GoogleSignIn-iOS")
-            ],
-            // 仅在 iOS 平台添加必要的 unsafeFlags，并限制范围
-            linkerSettings: [
-                .unsafeFlags(["-ObjC"], .when(platforms: [.iOS]))
             ]
+            // 完全移除 linkerSettings，不再包含任何 unsafeFlags
         ),
         .testTarget(
             name: "oneSDKTests",
@@ -51,4 +48,3 @@ let package = Package(
         ),
     ]
 )
-    

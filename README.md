@@ -5,6 +5,9 @@ Adjust版本5.4.0
 
 未经授权, 禁止使用  
 
+## Version 1.0.31  
+修复google、facebook等切换帐号无响应问题  
+
 ## Version 1.0.30  
 adjust成功并修复部分提示和绑定按钮没正确隐藏问题  
 

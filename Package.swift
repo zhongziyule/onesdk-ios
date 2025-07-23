@@ -19,28 +19,24 @@ let package = Package(
         .binaryTarget(
             name: "oneSDKBranch",
             url: "https://github.com/zhongziyule/onesdk-ios/raw/main/oneSDK.xcframework.zip",
-            checksum: "0b153ee56ead852bc4bd00731d8c782afc18c1e93a2e39b433e66568181624f1"
+            checksum: "3944b233cef24994f25f8f6ae41a9d129da9e897cc394ef88155a3c64a6ff3bd"
         ),
         .target(
             name: "oneSDK",
             dependencies: [
                 "oneSDKBranch",
-                // Facebook 依赖
                 .product(name: "FacebookAEM", package: "facebook-ios-sdk"),
                 .product(name: "FacebookBasics", package: "facebook-ios-sdk"),
                 .product(name: "FacebookCore", package: "facebook-ios-sdk"),
                 .product(name: "FacebookLogin", package: "facebook-ios-sdk"),
                 .product(name: "FacebookShare", package: "facebook-ios-sdk"),
                 .product(name: "FacebookGamingServices", package: "facebook-ios-sdk"),
-                // Adjust 依赖
                 .product(name: "AdjustGoogleOdm", package: "ios_sdk"),
                 .product(name: "AdjustSdk", package: "ios_sdk"),
                 .product(name: "AdjustWebBridge", package: "ios_sdk"),
-                // Google Sign-In 依赖
                 .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS"),
                 .product(name: "GoogleSignInSwift", package: "GoogleSignIn-iOS")
             ]
-            // 完全移除 linkerSettings，不再包含任何 unsafeFlags
         ),
         .testTarget(
             name: "oneSDKTests",
